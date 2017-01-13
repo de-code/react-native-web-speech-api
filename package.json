@@ -1,0 +1,22 @@
+{
+  "name": "react-native-web-speech-api",
+  "repository": "de-code/react-native-web-speech-api",
+  "version": "0.0.1",
+  "description": "Web Speech API for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Ecer",
+  "license": "MIT",
+  "dependencies": {
+    "react-native-android-speech-recognizer": "0.0.1"
+  },
+  "peerDependencies": {
+    "react-native": "^0.29.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10"
+  }
+}
