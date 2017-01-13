@@ -36,5 +36,6 @@ if (isSpeechRecognitionSupported()) {
     console.log("Error:", event.error);
   recognition.onresult = event =>
     console.log("Result:", event.results[0][0].transcript);
+  recognition.start();
 }
 ```
