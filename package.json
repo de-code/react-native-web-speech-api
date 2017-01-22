@@ -10,7 +10,7 @@
   "author": "Daniel Ecer",
   "license": "MIT",
   "dependencies": {
-    "react-native-android-speech-recognizer": "0.0.1"
+    "react-native-android-speech-recognizer": "0.0.x"
   },
   "peerDependencies": {
     "react-native": "0.x"
