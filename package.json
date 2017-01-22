@@ -1,7 +1,7 @@
 {
   "name": "react-native-web-speech-api",
   "repository": "de-code/react-native-web-speech-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web Speech API for React Native",
   "main": "index.js",
   "scripts": {
