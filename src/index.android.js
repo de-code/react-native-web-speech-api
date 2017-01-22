@@ -8,6 +8,16 @@ export const isSpeechRecognitionSupported = () =>
   !!SpeechRecognizer;
 
 export class SpeechRecognition {
+  _getOrCreateSpeechRecognizer() {
+    if (this._recognizer) {
+      return Promise.resolve(this._recognizer);
+    }
+    return SpeechRecognizer.createSpeechRecognizer().then(recognizer => {
+      this._recognizer = recognizer;
+      return recognizer;
+    });
+  }
+
   abort() {
     if (this._recognizer) {
       this._recognizer.destroy();
@@ -15,12 +25,7 @@ export class SpeechRecognition {
   }
 
   start() {
-    if (this._recognizer) {
-      this._recognizer.destroy();
-      this._recognizer = null;
-    }
-    SpeechRecognizer.createSpeechRecognizer().then(recognizer => {
-      this._recognizer = recognizer;
+    this._getOrCreateSpeechRecognizer().then(recognizer => {
       const listeners = {};
       if (this.onspeechstart) {
         listeners.onBeginningOfSpeech = () => this.onspeechstart();
